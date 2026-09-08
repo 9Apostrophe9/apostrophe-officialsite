@@ -77,31 +77,71 @@ letter-spacing: -2px;
 
 
 .navigation {
+    display: flex;
+    align-items: center;
+    gap: 35px;
 
-display: flex;
-
-gap: 35px;
-
+    /* 右上メニュー全体を下へ */
+    transform: translateY(12px);
 }
-
 
 .navigation a {
+    position: relative;
 
-font-size: 13px;
+    font-family: "Times New Roman", "Yu Mincho", serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
 
-letter-spacing: 3px;
+    color: #ffffff;
+    padding: 10px 3px;
 
-transition: 0.3s;
+text-shadow:
+    0 2px 5px #000,
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 18px rgba(255, 255, 255, 0.25);
 
+    transition: 0.35s ease;
 }
 
 
+/* 下の装飾ライン */
+.navigation a::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+
+    width: 0;
+    height: 1px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 12px rgba(255, 255, 255, 0.4);
+
+    transform: translateX(-50%);
+
+    transition: width 0.35s ease;
+}
+
+
+/* マウスを乗せた時 */
 .navigation a:hover {
+    opacity: 1;
 
-opacity: 0.5;
+    letter-spacing: 5px;
 
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 15px rgba(255, 255, 255, 0.45);
 }
 
+.navigation a:hover::after {
+    width: 100%;
+}
 
 .menu-button {
 
@@ -115,6 +155,10 @@ color: white;
 
 letter-spacing: 2px;
 
+}
+
+.mobile-actions {
+    display: none;
 }
 
 
@@ -229,30 +273,103 @@ letter-spacing: 7px;
 
 
 .hero-button {
+    position: relative;
+    display: inline-block;
 
-display: inline-block;
+    margin-top: 45px;
+    padding: 16px 55px;
 
-margin-top: 45px;
+    color: #ffffff;
 
-padding: 15px 45px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
 
-border: 1px solid rgba(255,255,255,0.7);
+    font-family: "Times New Roman", "Yu Mincho", serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 6px;
 
-font-size: 12px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.03)
+        );
 
-letter-spacing: 4px;
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.15),
+        inset 0 0 12px rgba(255, 255, 255, 0.05);
 
-transition: 0.4s;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.7);
 
+    transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease,
+        letter-spacing 0.4s ease;
 }
 
 
+/* 四隅の装飾 */
+.hero-button::before,
+.hero-button::after {
+    content: "";
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    transition: 0.4s ease;
+}
+
+.hero-button::before {
+    top: -4px;
+    left: -4px;
+
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+}
+
+.hero-button::after {
+    right: -4px;
+    bottom: -4px;
+
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+
+/* マウスを乗せた時 */
 .hero-button:hover {
+    color: #ffffff;
 
-background: white;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.20),
+            rgba(255, 255, 255, 0.08)
+        );
 
-color: black;
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.35),
+        0 0 35px rgba(255, 255, 255, 0.18),
+        inset 0 0 15px rgba(255, 255, 255, 0.08);
 
+    letter-spacing: 8px;
+
+    transform: translateY(-3px);
+}
+
+.hero-button:hover::before {
+    top: -7px;
+    left: -7px;
+}
+
+.hero-button:hover::after {
+    right: -7px;
+    bottom: -7px;
 }
 
 
@@ -1073,4 +1190,101 @@ font-size: 12px;
         letter-spacing: 4px;
     }
 
+    /* ====================
+   MOBILE HERO
+===================== */
+
+.header {
+    height: 70px;
+    padding: 0 6%;
 }
+
+/* 左上タイトル */
+.logo {
+    font-size: 20px;
+    letter-spacing: 0;
+}
+
+/* PCナビを隠す */
+.navigation {
+    display: none;
+}
+
+/* 右上MENUも隠す */
+.menu-button {
+    display: none;
+}
+
+
+/* HERO */
+.hero {
+    height: auto;
+    min-height: 0;
+
+    margin-top: 70px;
+
+    /* 写真を大きく */
+    background-size: 110% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* スマホで写真の高さを確保 */
+    aspect-ratio: 4 / 3;
+}
+
+
+/* 写真上の文字を全部消す */
+.hero-subtitle,
+.hero-button,
+.scroll,
+.hero-tagline {
+    display: none;
+}
+
+
+/* ====================
+   写真下の操作エリア
+===================== */
+
+.mobile-actions {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 28px 7% 35px;
+
+    background: #080808;
+}
+
+
+/* MENU / EXPLORE 共通 */
+.mobile-menu-button,
+.mobile-explore-button {
+    width: 145px;
+
+    padding: 15px 10px;
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    color: #ffffff;
+
+    font-family: "Times New Roman", "Yu Mincho", serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.12);
+
+    cursor: pointer;
+}
+
+}
+

@@ -1,21 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const menuButton = document.querySelector(".menu-button");
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
     const navigation = document.querySelector(".navigation");
 
-    if (!menuButton || !navigation) {
+    if (!navigation) {
         return;
     }
 
-    // MENUを開閉
-    menuButton.addEventListener("click", function () {
-        navigation.classList.toggle("menu-open");
-    });
+    // PC側・元のMENUボタン
+    if (menuButton) {
+        menuButton.addEventListener("click", function () {
+            navigation.classList.toggle("menu-open");
+        });
+    }
 
-    // メニューのリンクをクリックしたら閉じる
+    // スマホ下部のMENUボタン
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener("click", function () {
+            navigation.classList.toggle("menu-open");
+        });
+    }
+
+    // メニュー内のリンクを押したらMENUを閉じる
     navigation.addEventListener("click", function (event) {
 
-        if (event.target.closest("a")) {
+        const link = event.target.closest("a");
+
+        if (link) {
             navigation.classList.remove("menu-open");
         }
 
