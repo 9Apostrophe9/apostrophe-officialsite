@@ -1,152 +1,153 @@
 /* ====================
-   RESET
+  RESET
 ===================== */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 
 body {
-    background: #080808;
-    color: #ffffff;
-    font-family: "Times New Roman",
-                 "Yu Mincho",
-                 serif;
+background: #080808;
+color: #ffffff;
+font-family: "Times New Roman",
+"Yu Mincho",
+serif;
 }
 
 
 a {
-    color: inherit;
-    text-decoration: none;
+color: inherit;
+text-decoration: none;
 }
 
 
 
 /* ====================
-   HEADER
+  HEADER
 ===================== */
 
 .header {
 
-    position: fixed;
+position: fixed;
 
-    top: 0;
-    left: 0;
+top: 0;
+left: 0;
 
-    width: 100%;
+width: 100%;
 
-    height: 90px;
+height: 90px;
 
-    display: flex;
+display: flex;
 
-    align-items: center;
+align-items: center;
 
-    justify-content: space-between;
+justify-content: space-between;
 
-    padding: 0 6%;
+padding: 0 6%;
 
-    z-index: 100;
+z-index: 100;
 
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.8),
-            transparent
-        );
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.8),
+transparent
+);
 
 }
 
 
 .logo {
 
-    font-size: 30px;
+font-size: 30px;
 
-    font-weight: bold;
+font-weight: bold;
 
-    letter-spacing: -2px;
+letter-spacing: -2px;
 
 }
 
 
 .navigation {
 
-    display: flex;
+display: flex;
 
-    gap: 35px;
+gap: 35px;
 
 }
 
 
 .navigation a {
 
-    font-size: 13px;
+font-size: 13px;
 
-    letter-spacing: 3px;
+letter-spacing: 3px;
 
-    transition: 0.3s;
+transition: 0.3s;
 
 }
 
 
 .navigation a:hover {
 
-    opacity: 0.5;
+opacity: 0.5;
 
 }
 
 
 .menu-button {
 
-    display: none;
+display: none;
 
-    background: none;
+background: none;
 
-    border: none;
+border: none;
 
-    color: white;
+color: white;
 
-    letter-spacing: 2px;
+letter-spacing: 2px;
 
 }
 
 
 
 /* ====================
-   HERO
+  HERO
 ===================== */
 
 .hero {
 
-    position: relative;
+position: relative;
 
-    height: 100vh;
+height: 100vh;
 
-    min-height: 700px;
+min-height: 700px;
 
-    display: flex;
+display: flex;
 
-    align-items: center;
+align-items: center;
 
-    justify-content: center;
+justify-content: center;
 
-    text-align: center;
+text-align: center;
 
-    background-image:
-        url("../images/hero.jpg");
+background-image:
+url("../images/hero.jpg");
 
+    background-size: cover;
     background-size: 90% auto;
 
     background-repeat: no-repeat;
 
-    background-position: center;
+background-position: center;
 
     background-color: #080808;
 
@@ -155,30 +156,33 @@ a {
 
 .hero-overlay {
 
-    position: absolute;
+position: absolute;
 
-    inset: 0;
+inset: 0;
 
-    background:
-        linear-gradient(
+background:
+linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.7)
             rgba(0,0,0,0.22),
             rgba(0,0,0,0.48)
-        );
+);
 
 }
 
 
 .hero-content {
 
-    position: relative;
+position: relative;
 
-    z-index: 2;
+z-index: 2;
 
 }
 
 
 .hero-subtitle {
 
+    font-size: 12px;
     font-size: 18px;
 
     letter-spacing: 8px;
@@ -187,9 +191,11 @@ a {
 
     margin-bottom: 40px;
 
+    letter-spacing: 6px;
     text-shadow:
         0 2px 10px rgba(0,0,0,0.8);
 
+    margin-bottom: 30px;
     transform: translateY(50px);
 
 }
@@ -197,355 +203,355 @@ a {
 
 .hero h1 {
 
-    font-size: clamp(70px, 12vw, 180px);
+font-size: clamp(70px, 12vw, 180px);
 
-    font-weight: normal;
+font-weight: normal;
 
-    letter-spacing: -7px;
+letter-spacing: -7px;
 
-    line-height: 1;
+line-height: 1;
 
-    text-shadow:
-        0 0 20px rgba(255,255,255,0.4);
+text-shadow:
+0 0 20px rgba(255,255,255,0.4);
 
 }
 
 
 .hero-tagline {
 
-    margin-top: 30px;
+margin-top: 30px;
 
-    font-size: 13px;
+font-size: 13px;
 
-    letter-spacing: 7px;
+letter-spacing: 7px;
 
 }
 
 
 .hero-button {
 
-    display: inline-block;
+display: inline-block;
 
-    margin-top: 45px;
+margin-top: 45px;
 
-    padding: 15px 45px;
+padding: 15px 45px;
 
-    border: 1px solid rgba(255,255,255,0.7);
+border: 1px solid rgba(255,255,255,0.7);
 
-    font-size: 12px;
+font-size: 12px;
 
-    letter-spacing: 4px;
+letter-spacing: 4px;
 
-    transition: 0.4s;
+transition: 0.4s;
 
 }
 
 
 .hero-button:hover {
 
-    background: white;
+background: white;
 
-    color: black;
+color: black;
 
 }
 
 
 .scroll {
 
-    position: absolute;
+position: absolute;
 
-    bottom: 35px;
+bottom: 35px;
 
-    left: 50%;
+left: 50%;
 
-    transform: translateX(-50%);
+transform: translateX(-50%);
 
-    font-size: 10px;
+font-size: 10px;
 
-    letter-spacing: 5px;
+letter-spacing: 5px;
 
 }
 
 
 .scroll span {
 
-    display: block;
+display: block;
 
-    margin-top: 10px;
+margin-top: 10px;
 
-    font-size: 20px;
+font-size: 20px;
 
 }
 
 
 
 /* ====================
-   SECTION
+  SECTION
 ===================== */
 
 .section {
 
-    padding: 130px 8%;
+padding: 130px 8%;
 
-    background: #0b0b0b;
+background: #0b0b0b;
 
 }
 
 
 .dark-section {
 
-    background: #050505;
+background: #050505;
 
 }
 
 
 .section-title {
 
-    display: flex;
+display: flex;
 
-    align-items: center;
+align-items: center;
 
-    gap: 25px;
+gap: 25px;
 
-    margin-bottom: 70px;
+margin-bottom: 70px;
 
-    border-bottom: 1px solid #333;
+border-bottom: 1px solid #333;
 
-    padding-bottom: 20px;
+padding-bottom: 20px;
 
 }
 
 
 .section-title span {
 
-    font-size: 12px;
+font-size: 12px;
 
-    color: #888;
+color: #888;
 
-    letter-spacing: 3px;
+letter-spacing: 3px;
 
 }
 
 
 .section-title h2 {
 
-    font-size: 30px;
+font-size: 30px;
 
-    font-weight: normal;
+font-weight: normal;
 
-    letter-spacing: 7px;
+letter-spacing: 7px;
 
 }
 
 
 
 /* ====================
-   NEWS
+  NEWS
 ===================== */
 
 .news-list {
 
-    max-width: 1000px;
+max-width: 1000px;
 
 }
 
 
 .news-item {
 
-    display: grid;
+display: grid;
 
-    grid-template-columns: 150px 1fr;
+grid-template-columns: 150px 1fr;
 
-    padding: 25px 0;
+padding: 25px 0;
 
-    border-bottom: 1px solid #292929;
+border-bottom: 1px solid #292929;
 
 }
 
 
 .news-item time {
 
-    color: #999;
+color: #999;
 
-    font-size: 13px;
+font-size: 13px;
 
 }
 
 
 .news-item p {
 
-    font-size: 15px;
+font-size: 15px;
 
 }
 
 
 
 /* ====================
-   MUSIC
+  MUSIC
 ===================== */
 
 .coming-soon {
 
-    min-height: 300px;
+min-height: 300px;
 
-    display: flex;
+display: flex;
 
-    flex-direction: column;
+flex-direction: column;
 
-    justify-content: center;
+justify-content: center;
 
-    align-items: center;
+align-items: center;
 
-    border: 1px solid #333;
+border: 1px solid #333;
 
 }
 
 
 .coming-title {
 
-    font-size: 50px;
+font-size: 50px;
 
-    letter-spacing: 12px;
+letter-spacing: 12px;
 
 }
 
 
 .coming-soon p:last-child {
 
-    margin-top: 20px;
+margin-top: 20px;
 
-    color: #888;
+color: #888;
 
-    letter-spacing: 4px;
+letter-spacing: 4px;
 
 }
 
 
 
 /* ====================
-   GOODS
+  GOODS
 ===================== */
 
 .goods-content {
 
-    display: flex;
+display: flex;
 
-    justify-content: space-between;
+justify-content: space-between;
 
-    align-items: center;
+align-items: center;
 
-    max-width: 1000px;
+max-width: 1000px;
 
 }
 
 
 .goods-title {
 
-    font-size: 35px;
+font-size: 35px;
 
-    letter-spacing: 5px;
+letter-spacing: 5px;
 
-    line-height: 1.5;
+line-height: 1.5;
 
 }
 
 
 .goods-content p:not(.goods-title) {
 
-    margin-top: 25px;
+margin-top: 25px;
 
-    color: #888;
+color: #888;
 
 }
 
 
 .line-button {
 
-    border-bottom: 1px solid white;
+border-bottom: 1px solid white;
 
-    padding-bottom: 10px;
+padding-bottom: 10px;
 
-    letter-spacing: 3px;
+letter-spacing: 3px;
 
 }
 
 
 
 /* ====================
-   LIVE
+  LIVE
 ===================== */
 
 .live-message {
 
-    text-align: center;
+text-align: center;
 
-    padding: 100px 0;
+padding: 100px 0;
 
 }
 
 
 .live-message p {
 
-    letter-spacing: 5px;
+letter-spacing: 5px;
 
-    color: #888;
+color: #888;
 
 }
 
 
 .live-message h3 {
 
-    margin-top: 25px;
+margin-top: 25px;
 
-    font-size: 50px;
+font-size: 50px;
 
-    letter-spacing: 10px;
+letter-spacing: 10px;
 
-    font-weight: normal;
+font-weight: normal;
 
 }
 
 
 
 /* ====================
-   ABOUT
+  ABOUT
 ===================== */
 
 .about-text {
 
-    max-width: 700px;
+max-width: 700px;
 
 }
 
 
 .about-text h3 {
 
-    font-size: 60px;
+font-size: 60px;
 
-    font-weight: normal;
+font-weight: normal;
 
 }
 
 
 .about-text p {
 
-    margin-top: 30px;
+margin-top: 30px;
 
-    line-height: 2;
+line-height: 2;
 
-    color: #aaa;
+color: #aaa;
 
 }
 
 
 
 /* ====================
-   FOLLOW
+  FOLLOW
 ===================== */
 
 .official-social {
 
-    margin-bottom: 80px;
+margin-bottom: 80px;
 
 }
 
@@ -553,306 +559,306 @@ a {
 .official-social > p,
 .member-instagram > p {
 
-    letter-spacing: 5px;
+letter-spacing: 5px;
 
-    margin-bottom: 25px;
+margin-bottom: 25px;
 
-    color: #999;
+color: #999;
 
 }
 
 
 .social-button {
 
-    display: inline-block;
+display: inline-block;
 
-    border: 1px solid #555;
+border: 1px solid #555;
 
-    padding: 18px 50px;
+padding: 18px 50px;
 
-    letter-spacing: 3px;
+letter-spacing: 3px;
 
-    transition: 0.3s;
+transition: 0.3s;
 
 }
 
 
 .social-button:hover {
 
-    background: white;
+background: white;
 
-    color: black;
+color: black;
 
 }
 
 
 .members {
 
-    display: grid;
+display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+grid-template-columns:
+repeat(3, 1fr);
 
-    gap: 20px;
+gap: 20px;
 
 }
 
 
 .members a {
 
-    padding: 40px 30px;
+padding: 40px 30px;
 
-    border: 1px solid #333;
+border: 1px solid #333;
 
-    font-size: 20px;
+font-size: 20px;
 
-    transition: 0.3s;
+transition: 0.3s;
 
 }
 
 
 .members a:hover {
 
-    border-color: white;
+border-color: white;
 
 }
 
 
 .members span {
 
-    display: block;
+display: block;
 
-    margin-top: 15px;
+margin-top: 15px;
 
-    font-size: 12px;
+font-size: 12px;
 
-    color: #888;
+color: #888;
 
-    letter-spacing: 2px;
+letter-spacing: 2px;
 
 }
 
 
 
 /* ====================
-   CONTACT
+  CONTACT
 ===================== */
 
 .contact-content {
 
-    display: flex;
+display: flex;
 
-    justify-content: space-between;
+justify-content: space-between;
 
-    max-width: 900px;
+max-width: 900px;
 
 }
 
 
 .contact-content p {
 
-    color: #888;
+color: #888;
 
-    letter-spacing: 3px;
+letter-spacing: 3px;
 
 }
 
 
 .contact-content a {
 
-    border-bottom: 1px solid white;
+border-bottom: 1px solid white;
 
-    padding-bottom: 10px;
+padding-bottom: 10px;
 
-    letter-spacing: 3px;
+letter-spacing: 3px;
 
 }
 
 
 
 /* ====================
-   FOOTER
+  FOOTER
 ===================== */
 
 footer {
 
-    padding: 60px 8%;
+padding: 60px 8%;
 
-    text-align: center;
+text-align: center;
 
-    border-top: 1px solid #222;
+border-top: 1px solid #222;
 
-    background: #050505;
+background: #050505;
 
 }
 
 
 .footer-logo {
 
-    font-size: 30px;
+font-size: 30px;
 
-    margin-bottom: 20px;
+margin-bottom: 20px;
 
 }
 
 
 footer p {
 
-    color: #666;
+color: #666;
 
-    font-size: 12px;
+font-size: 12px;
 
 }
 
 
 
 /* ====================
-   MOBILE
+  MOBILE
 ===================== */
 
 @media (max-width: 768px) {
 
 
-    .header {
+.header {
 
-        height: 70px;
+height: 70px;
 
-        padding: 0 6%;
+padding: 0 6%;
 
-    }
+}
 
 
-    .logo {
+.logo {
 
-        font-size: 24px;
+font-size: 24px;
 
-    }
+}
 
 
-    .navigation {
+.navigation {
 
-        display: none;
+display: none;
 
-    }
+}
 
 
-    .menu-button {
+.menu-button {
 
-        display: block;
+display: block;
 
-    }
+}
 
 
-    .hero {
+.hero {
 
-        min-height: 650px;
+min-height: 650px;
 
-    }
+}
 
 
-    .hero h1 {
+.hero h1 {
 
-        font-size: 70px;
+font-size: 70px;
 
-        letter-spacing: -4px;
+letter-spacing: -4px;
 
-    }
+}
 
 
-    .hero-subtitle {
+.hero-subtitle {
 
-        font-size: 9px;
+font-size: 9px;
 
-        letter-spacing: 4px;
+letter-spacing: 4px;
 
-    }
+}
 
 
-    .hero-tagline {
+.hero-tagline {
 
-        font-size: 9px;
+font-size: 9px;
 
-        letter-spacing: 4px;
+letter-spacing: 4px;
 
-    }
+}
 
 
-    .section {
+.section {
 
-        padding: 90px 7%;
+padding: 90px 7%;
 
-    }
+}
 
 
-    .section-title h2 {
+.section-title h2 {
 
-        font-size: 23px;
+font-size: 23px;
 
-    }
+}
 
 
-    .news-item {
+.news-item {
 
-        grid-template-columns: 1fr;
+grid-template-columns: 1fr;
 
-        gap: 10px;
+gap: 10px;
 
-    }
+}
 
 
-    .coming-title {
+.coming-title {
 
-        font-size: 27px;
+font-size: 27px;
 
-        letter-spacing: 6px;
+letter-spacing: 6px;
 
-    }
+}
 
 
-    .goods-content {
+.goods-content {
 
-        display: block;
+display: block;
 
-    }
+}
 
 
-    .line-button {
+.line-button {
 
-        display: inline-block;
+display: inline-block;
 
-        margin-top: 40px;
+margin-top: 40px;
 
-    }
+}
 
 
-    .live-message h3 {
+.live-message h3 {
 
-        font-size: 30px;
+font-size: 30px;
 
-    }
+}
 
 
-    .members {
+.members {
 
-        grid-template-columns: 1fr;
+grid-template-columns: 1fr;
 
-    }
+}
 
 
-    .contact-content {
+.contact-content {
 
-        display: block;
+display: block;
 
-    }
+}
 
 
-    .contact-content a {
+.contact-content a {
 
-        display: inline-block;
+display: inline-block;
 
-        margin-top: 30px;
+margin-top: 30px;
 
-    }
+}
 
 }
 
@@ -1041,50 +1047,6 @@ footer p {
 
         font-size: 9px;
 
-    }
-
-}
-
-/* ====================
-   MOBILE MENU
-==================== */
-
-@media (max-width: 768px) {
-
-    .navigation.menu-open {
-        display: flex !important;
-
-        position: fixed;
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-        align-items: center;
-
-        gap: 0;
-
-        padding: 20px 0;
-
-        background: rgba(0, 0, 0, 0.96);
-
-        border-top: 1px solid #333;
-
-        z-index: 999;
-    }
-
-    .navigation.menu-open a {
-        display: block;
-
-        width: 100%;
-
-        padding: 18px 0;
-
-        text-align: center;
-
-        font-size: 12px;
-        letter-spacing: 4px;
     }
 
 }
