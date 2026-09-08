@@ -749,368 +749,113 @@ footer p {
 
 @media (max-width: 768px) {
 
-
-    /* ====================
-       HEADER
-    ==================== */
-
     .header {
-
-        display: flex;
-
-        justify-content: flex-end;
-
         height: 70px;
-
         padding: 0 6%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
+    .logo { display: none; }
 
-    /* スマホではロゴを消す */
-
-    .logo {
-
-        display: none;
-    }
-
-
-    /* 通常のナビゲーションを非表示 */
-
-    .navigation {
-
-        display: none;
-    }
-
-
-    /* MENUを表示 */
+    .navigation { display: none; }
 
     .menu-button {
-
         display: block;
-
         background: none;
-
         border: none;
-
         color: white;
-
         font-size: 12px;
-
         letter-spacing: 3px;
-
         cursor: pointer;
+        padding: 10px 0;
     }
 
-
-
-    /* ====================
-       MOBILE MENU OPEN
-    ==================== */
-
     .navigation.menu-open {
-
         display: flex !important;
-
         position: fixed;
-
         top: 70px;
-
         left: 0;
-
         width: 100%;
-
         flex-direction: column;
-
         align-items: center;
-
         gap: 0;
-
         padding: 20px 0;
-
         background: rgba(0, 0, 0, 0.96);
-
         border-top: 1px solid #333;
-
         z-index: 999;
     }
 
-
     .navigation.menu-open a {
-
         display: block;
-
         width: 100%;
-
         padding: 18px 0;
-
         text-align: center;
-
         font-size: 12px;
-
         letter-spacing: 4px;
     }
 
-
-
-    /* ====================
-       HERO
-    ==================== */
-
     .hero {
-
         min-height: 650px;
-
         background-size: 105% auto;
-
         background-position: center;
     }
 
+    .hero-button { display: none; }
 
-    /* ====================
-       HERO CONTENT
-    ==================== */
-
-    .hero-content {
-
-        margin-top: 50px;
-    }
-
+    .hero-content { margin-top: 50px; }
 
     .hero-subtitle {
-
         font-size: 14px;
-
         letter-spacing: 3px;
-
         padding: 0 20px;
     }
 
-
-    /* スマホではEXPLOREを消す */
-
-    .hero-button {
-
-        display: none;
-    }
-
-
-
-    /* ====================
-       SCROLL
-    ==================== */
-
     .scroll {
-
         bottom: 25px;
-
         font-size: 8px;
-
         letter-spacing: 3px;
     }
 
+    .section { padding: 80px 6%; }
 
+    .section-title { gap: 15px; margin-bottom: 40px; }
 
-    /* ====================
-       SECTION
-    ==================== */
-
-    .section {
-
-        padding: 80px 6%;
-    }
-
-
-
-    /* ====================
-       SECTION TITLE
-    ==================== */
-
-    .section-title {
-
-        gap: 15px;
-
-        margin-bottom: 40px;
-    }
-
-
-    .section-title h2,
-    .section-title h1 {
-
+    .section-title h2, .section-title h1 {
         font-size: 28px;
-
         letter-spacing: 4px;
     }
 
+    .news-item { display: block; padding: 20px 0; }
+    .news-item time { display: block; margin-bottom: 8px; font-size: 10px; }
+    .news-item p { font-size: 13px; }
 
+    .coming-soon { padding: 60px 0; }
+    .coming-title { font-size: 22px; letter-spacing: 4px; }
 
-    /* ====================
-       NEWS
-    ==================== */
+    .goods-content { display: block; }
+    .goods-title { font-size: 20px; letter-spacing: 2px; }
+    .goods-image { margin-top: 50px; }
 
-    .news-item {
+    .live-message { padding: 60px 0; }
+    .live-message h3 { font-size: 22px; letter-spacing: 4px; }
 
-        display: block;
+    .about-text h3 { font-size: 25px; }
+    .about-text p { font-size: 13px; line-height: 2; }
 
-        padding: 20px 0;
-    }
-
-
-    .news-item time {
-
-        display: block;
-
-        margin-bottom: 8px;
-
-        font-size: 10px;
-    }
-
-
-    .news-item p {
-
-        font-size: 13px;
-    }
-
-
-
-    /* ====================
-       MUSIC
-    ==================== */
-
-    .coming-soon {
-
-        padding: 60px 0;
-    }
-
-
-    .coming-title {
-
-        font-size: 22px;
-
-        letter-spacing: 4px;
-    }
-
-
-
-    /* ====================
-       GOODS
-    ==================== */
-
-    .goods-content {
-
-        display: block;
-    }
-
-
-    .goods-title {
-
-        font-size: 20px;
-
-        letter-spacing: 2px;
-    }
-
-
-    .goods-image {
-
-        margin-top: 50px;
-    }
-
-
-
-    /* ====================
-       LIVE
-    ==================== */
-
-    .live-message {
-
-        padding: 60px 0;
-    }
-
-
-    .live-message h3 {
-
-        font-size: 22px;
-
-        letter-spacing: 4px;
-    }
-
-
-
-    /* ====================
-       ABOUT
-    ==================== */
-
-    .about-text h3 {
-
-        font-size: 25px;
-    }
-
-
-    .about-text p {
-
-        font-size: 13px;
-
-        line-height: 2;
-    }
-
-
-
-    /* ====================
-       FOLLOW
-    ==================== */
-
-    .official-social {
-
-        margin-bottom: 50px;
-    }
-
-
-    .members {
-
-        gap: 10px;
-    }
-
-
+    .official-social { margin-bottom: 50px; }
+    .members { gap: 10px; }
     .members a {
-
         display: flex;
-
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 5px;
-
         padding: 18px 0;
-
         font-size: 10px;
     }
 
-
-
-    /* ====================
-       CONTACT
-    ==================== */
-
-    .contact-content a {
-
-        font-size: 12px;
-    }
-
-
-
-    /* ====================
-       FOOTER
-    ==================== */
-
-    footer {
-
-        padding: 45px 6%;
-    }
-
-
-    .footer-logo {
-
-        font-size: 20px;
-    }
-
+    .contact-content a { font-size: 12px; }
+    footer { padding: 45px 6%; }
+    .footer-logo { font-size: 20px; }
 }
