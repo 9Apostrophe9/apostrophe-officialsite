@@ -2,18 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menuButton = document.querySelector(".menu-button");
     const navigation = document.querySelector(".navigation");
-    const navigationLinks = document.querySelectorAll(".navigation a");
+
+    if (!menuButton || !navigation) {
+        return;
+    }
 
     // MENUを開閉
     menuButton.addEventListener("click", function () {
         navigation.classList.toggle("menu-open");
     });
 
-    // メニュー内のリンクを選択したらMENUを閉じる
-    navigationLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
+    // メニューのリンクをクリックしたら閉じる
+    navigation.addEventListener("click", function (event) {
+
+        if (event.target.closest("a")) {
             navigation.classList.remove("menu-open");
-        });
+        }
+
     });
 
 });
