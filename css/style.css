@@ -1288,3 +1288,155 @@ font-size: 12px;
 
 }
 
+/* ====================
+   SOCIAL ICON
+===================== */
+
+
+/* アイコン共通 */
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* ====================
+   YouTube
+===================== */
+
+.youtube-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* YouTubeアイコン */
+
+.youtube-icon {
+    width: 30px;
+    height: 30px;
+
+    /* YouTubeカラー */
+    color: #ff0000;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 0, 0, 0.25));
+}
+
+
+/* YouTubeボタンにマウスを乗せた時 */
+
+.youtube-button:hover .youtube-icon {
+    color: #ff0000;
+
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 0, 0, 0.65));
+}
+
+
+/* ====================
+   Instagram
+===================== */
+
+
+/* Instagramカード */
+
+.members a {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 40px 30px;
+}
+
+
+/* Instagramアイコン */
+
+.instagram-icon {
+    width: 30px;
+    height: 30px;
+
+    /* Instagram系カラー */
+    color: #e1306c;
+
+    filter:
+        drop-shadow(0 0 5px rgba(225, 48, 108, 0.20));
+}
+
+
+/* Instagramカードにマウスを乗せた時 */
+
+.members a:hover .instagram-icon {
+    color: #e1306c;
+
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 8px rgba(225, 48, 108, 0.55));
+}
+
+
+/* ====================
+   SNSカード Hover
+===================== */
+
+
+/* Instagramカード */
+
+.members a:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+
+/* YouTubeボタン */
+
+.youtube-button:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ====================
+   MOBILE
+===================== */
+
+@media (max-width: 768px) {
+
+    .social-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+
+    .youtube-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .instagram-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .members a {
+        gap: 18px;
+    }
+
+}
