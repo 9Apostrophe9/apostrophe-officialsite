@@ -1440,3 +1440,36 @@ font-size: 12px;
     }
 
 }
+
+@media (max-width: 768px) {
+
+    .social-icon {
+        display: block !important;
+
+        width: 28px !important;
+        height: 28px !important;
+
+        min-width: 28px !important;
+        min-height: 28px !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .youtube-icon path {
+        fill: #ff0000 !important;
+    }
+
+    .instagram-icon rect {
+        stroke: #e1306c !important;
+    }
+
+    .instagram-icon circle {
+        stroke: #e1306c !important;
+    }
+
+    .instagram-icon circle:last-child {
+        fill: #e1306c !important;
+        stroke: none !important;
+    }
+}
